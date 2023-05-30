@@ -6,7 +6,7 @@ const { bookingRouter } = require("./Routes/bookingRoute");
 const { dashboardRouter } = require("./Routes/dashboardROute");
 const {authenticate}=require("./Middleware/authentication")
 const app=express()
-const port=6060
+
 app.use(express.json())
 
 app.use("/",(req,res)=>{
@@ -21,7 +21,7 @@ app.use("/flight",flightRouter)
 app.use("/booking",bookingRouter)
 app.use("/dashboard",dashboardRouter)
 
-app.listen(port,async()=>{
+app.listen(6060,async()=>{
     try{
         await connection
         console.log("Connected to MongoDB")
@@ -30,5 +30,5 @@ app.listen(port,async()=>{
         console.log(err)
         console.log("Not Connected to DB")
     }
-    console.log(`Server is Running at port ${port}`)
+    console.log(`Server is Running at port ${6060}`)
 })
