@@ -9,9 +9,9 @@ const app=express()
 const port=6060
 app.use(express.json())
 
-// app.use("/",(req,res)=>{
-//     res.send("Home Page")
-// })
+app.use("/",(req,res)=>{
+    res.send("Home Page")
+})
 
 app.use("/user",userRouter)
 app.use("/flight",flightRouter)
