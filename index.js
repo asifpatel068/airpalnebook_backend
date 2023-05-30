@@ -4,7 +4,7 @@ const { userRouter } = require("./Routes/userRouter");
 const { flightRouter } = require("./Routes/flightsRouter");
 const { bookingRouter } = require("./Routes/bookingRoute");
 const { dashboardRouter } = require("./Routes/dashboardROute");
-
+const {authenticate}=require("./Middleware/authentication")
 const app=express()
 const port=6060
 app.use(express.json())
@@ -14,6 +14,9 @@ app.use("/",(req,res)=>{
 })
 
 app.use("/user",userRouter)
+
+app.use(authenticate)
+
 app.use("/flight",flightRouter)
 app.use("/booking",bookingRouter)
 app.use("/dashboard",dashboardRouter)
