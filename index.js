@@ -3,7 +3,7 @@ const { connection } = require("./Config/db");
 const { userRouter } = require("./Routes/userRouter");
 const { flightRouter } = require("./Routes/flightsRouter");
 const { bookingRouter } = require("./Routes/bookingRoute");
-const { dashboardRouter } = require("./Routes/dashboardROute");
+const { dashboardRouter } = require("./Routes/dashboardRoute");
 const {authenticate}=require("./Middleware/authentication")
 const app=express()
 
