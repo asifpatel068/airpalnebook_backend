@@ -15,13 +15,13 @@ app.use("/",(req,res)=>{
 
 app.use("/user",userRouter)
 
-app.use(authenticate)
+// app.use(authenticate)
 
 app.use("/flight",flightRouter)
 app.use("/booking",bookingRouter)
 app.use("/dashboard",dashboardRouter)
 
-app.listen(6060,async()=>{
+app.listen(3000,"0.0.0.0",async()=>{
     try{
         await connection
         console.log("Connected to MongoDB")
